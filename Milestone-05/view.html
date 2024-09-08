@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="resume-display">
+        <!-- This section will display the resume based on URL -->
+    </div>
+    <button id="edit-btn" class="edit-btn">Edit Resume</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const resumeDisplay = document.getElementById("resume-display");
+            const editBtn = document.getElementById("edit-btn");
+
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get("username");
+
+            if (resumeDisplay && username) {
+                const resumeData = localStorage.getItem(username);
+
+                if (resumeData) {
+                    const data = JSON.parse(resumeData);
+                    resumeDisplay.innerHTML = `
+                        <h3>${data.firstName} ${data.lastName}</h3>
+                        <p>Email: ${data.email}</p>
+                        <p>Contact No: ${data.phone}</p>
+                        <h4>Education</h4>
+                        <p>${data.education}</p>
+                        <h4>Skills</h4>
+                        <p>${data.skills}</p>
+                        <h4>Work Experience</h4>
+                        <p>${data.workExperience}</p>
+                    `;
+                } else {
+                    resumeDisplay.innerHTML = "<p>No resume found.</p>";
+                }
+            }
+
+            if (editBtn) {
+                editBtn.addEventListener("click", () => {
+                    window.location.href = "index.html";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
