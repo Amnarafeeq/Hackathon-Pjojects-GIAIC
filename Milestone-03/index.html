@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Resume Builder</h1>
+    <div class="resume-form">
+        
+      <section id="personal-info-section">
+        <form>
+            
+              <h1>Personal Information</h1>
+              <label class="lbl" for="first-name">First Name:</label> <br> 
+              <input class="inp" type="text" id="first-name" name="name" placeholder="first-name"><br><br>
+          
+              <label class="lbl" for="first-name">Last Name:</label><br> 
+              <input class="inp" type="text" id="last-name" name="name" placeholder="last-name"><br><br>
+
+              <label class="lbl" for="email">Email:</label><br> 
+              <input class="inp" type="email" id="email" name="email" placeholder="email"><br><br>
+          
+              <label class="lbl" for="number">Contact-No:</label><br> 
+              <input class="inp" type="text" id="phone" maxlength="11" placeholder="contact-no"> <br><br> 
+            </section> 
+
+            <section id="education-section">
+                <h1>Education</h1>
+                <label class="lbl" for="education">Education :</label><br> 
+                <textarea class="inp" name="education" id="education"
+                rows="10" cols="50" required placeholder="write about your education here"></textarea> 
+                
+            </section>
+
+              <section id="skills-section">
+                <h1>Skills</h1>
+                <label class="lbl" for="skills">Skills :</label> <br> 
+                <textarea class="inp" name="skills" id="skills"
+                rows="10" cols="50" required placeholder="skills"></textarea> <br>
+            </section>
+
+            <section id="work-exp-section">
+              <h1>Work-Experience</h1>
+                <label class="lbl" for="education">Work-Experience :</label><br> 
+                <textarea class="inp"  name="work-experience" id="work-experience"
+                rows="10" cols="50" required placeholder="enter your experience in work"></textarea> 
+            </section>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+    
+    
+    <div  id="resume-display">
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
+
