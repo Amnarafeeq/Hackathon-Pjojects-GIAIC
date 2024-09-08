@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <h1>Dynamic Resume Builder</h1>
+    <div class="resume-form" id="resume-form">
+        <form id="resume-builder-form">
+            <section id="personal-info-section">
+                <h2>Personal Information</h2>
+                <label for="first-name">First Name:</label>
+                <input class="inp" type="text" id="first-name" name="firstName" placeholder="First Name" required>
+                
+                <label for="last-name">Last Name:</label>
+                <input class="inp" type="text" id="last-name" name="lastName" placeholder="Last Name" required>
+
+                <label for="email">Email:</label>
+                <input class="inp" type="email" id="email" name="email" placeholder="Email" required>
+                
+                <label for="phone">Contact No:</label>
+                <input class="inp" type="tel" id="phone" name="phone" maxlength="11" placeholder="Contact No" required>
+            </section> 
+
+            <section id="education-section">
+                <h2>Education</h2>
+                <textarea class="inp" name="education" id="education" rows="5" placeholder="Enter your education details" required></textarea>
+            </section>
+
+            <section id="skills-section">
+                <h2>Skills</h2>
+                <textarea class="inp" name="skills" id="skills" rows="5" placeholder="List your skills" required></textarea>
+            </section>
+
+            <section id="work-exp-section">
+                <h2>Work Experience</h2>
+                <textarea class="inp" name="workExperience" id="work-experience" rows="5" placeholder="Enter your work experience" required></textarea>
+            </section>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="generated-resume"></div>
+
+    <script src="res.js"></script>
+</body>
+</html>
