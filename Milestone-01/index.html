@@ -1,82 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Interactive Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="info">
-                <h2>Amna Rafeeq</h2>
-                <p><b>Email:</b> <a href="mailto:amnarafeeq68@gmail.com">amnarafeeq68@gmail.com</a></p>
-                <p><b>WhatsApp:</b> <a target="_blank" href="https://wa.me/+923100209457?text=Assalam-O-Alaikum.">Amna Rafeeq</a></p>
-                <p><b>Linkedin:</b> <a target="_blank" href="https://www.linkedin.com/in/amna-rafeeq-823b3a300/">Amna Rafeeq</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="top-sec">
+        <div class="user-sec">
+          <div class="yellow-bar">
+            <div class="user-circle">
+              <div class="under-yellow">
+                <img src="amna.jpg" alt="" />
+              </div>
             </div>
-            <img src="amna.jpg" alt="Profile Picture" class="profile-pic">
-        </header>
-        <hr>
-        
-        <section id="education">
-            <h2>Education</h2>
-            <ol type="I">
-                <li>Matric from Al-Syed English Grammar School.
-                    <ul>
-                        <li>In Science with <b>90%</b></li>
-                    </ul>
-                </li>
-                <li>Inter from Karachi Superior College.
-                    <ul>
-                        <li>In Pre-Medical with <b>68%</b></li>
-                    </ul>
-                </li>
-            </ol>
-            <h2>Technical Education</h2>
-            <ul>
-            <li>Currently enrolled in Governer Initiative of Artificial Intelligence, Web 3.O and Metaverse </li>
-            <li>Bano Qabil 3.0 Website Development-1</li>
-        </ul>
+          </div>
+        </div>
 
-        </section>
-        <hr>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Next.js</li>
-            </ul>
-            <button id="toggle-skills">Hide Skills</button>
-        </section>
-        <hr>
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            
-                <p>I don't have any professional work experience, but I have created some personal projects like:</p>
-                
-                <ul id="project-lists">
-                    <li>Simple Calculator using Typescript</li>
-                    <li>Number Guessing Game Using TypeScript</li>
-                    <li>Countdown Timer using Typescript</li>
-                    <li>Atm Machine using Typescript</li>
-                    <li class='hidden-project'>Currency Converter using Typescript</li>
-                    <li class='hidden-project'>Todos using Typescript</li>
-                    <li class='hidden-project'>Clone of Netflix </li>
-                    <li class='hidden-project'> Clone of Foodpanda App</li>
-                    <li class='hidden-project'>45-Questions Of TypeScript </li>
-                    <li class='hidden-project'>Milestone 1 of Next.js "Hello World"</li>
-                    <li class='hidden-project'>Milestone 2 of Next.js and Tailwindcss "Portfolio"</li>
+        <div class="user-name">
+          <h1>Amna Rafeeq</h1>
+          <div class="icon-sec">
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-sec">
+        <div class="bottom-left">
+          <div class="b-l-sec">
+            <!-- contact -->
+            <div class="b-l-card">
+              <div class="heading">
+                <h3>Contact</h3>
+              </div>
+              <div class="b-l-detail">
+                <a href="#" class="detail">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Sector-5G Saeedabad Baldia Town Karachi
+                </a>
+                <a href="#" class="detail">
+                  <i class="fa-solid fa-phone"></i>
+                  +92 3100209457
+                </a>
+                <a href="#" class="detail">
+                  <i class="fa-solid fa-envelope"></i>
+                  amnarafeeq68@gmail.com
+                </a>
+                <a href="#" class="detail">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  +92 3100209457
+                </a>
+              </div>
+            </div>
+            <!-- technical courses -->
+            <div class="b-l-card">
+              <div class="heading">
+                <h3>Technical Courses</h3>
+              </div>
+              <div class="b-l-detail">
+                <div class="course">
+                  <div class="course-dot"></div>
+                  <div class="course-detail">
+                    <h4>Web Development</h4>
+                    <p>3Months From Bano Qabil</p>
+                  </div>
+                </div>
+
+                <div class="course">
+                  <div class="course-dot"></div>
+                  <div class="course-detail">
+                    <h4>AI and Cloud Computing</h4>
+                    <p>1Year from Governer Sindh IT Initiative</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- skills -->
+            <div class="b-l-card">
+              <div class="heading">
+                <h3>Skills</h3>
+              </div>
+              <div class="b-l-detail">
+                <ul class="skills" id="skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                  <li>TYPESCRIPT</li>
+                  <li>TAILWIND CSS</li>
+                  <li>NEXT.JS</li>
                 </ul>
-            
-            <button id="show-more-button">Show More</button>
+              </div>
+              <button id="skills-toggle">Toggle Skills</button>
+            </div>
+          </div>
+        </div>
 
-        </section> 
+        <div class="bottom-right">
+          <div class="r-b-sec">
+            <div class="heading r-heading">
+              <h3><i class="fa-solid fa-user"></i>Profile</h3>
+            </div>
+            <div class="r-b-detail">
+              <p>
+                I am an eager IT student currently honing my skills in frontend
+                development, including HTML, CSS, and JavaScript. With a focus
+                on learning modern frameworks like Next.js and Tailwind CSS, I
+                am committed to building a solid foundation for a future in
+                technology.
+              </p>
+              <p>
+                I am actively working on real-world projects to sharpen my
+                frontend skills. By building responsive and interactive
+                websites, I aim to apply best practices in web development. I am
+                dedicated to learning new tools and technologies to stay current
+                with industry trends. My focus is on creating clean, efficient,
+                and user-friendly web applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="r-b-sec">
+            <div class="heading r-heading">
+              <h3><i class="fa-solid fa-certificate"></i>Education</h3>
+            </div>
+            <div class="r-b-detail">
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>Matriculation</h4>
+                  <p>(Science) From Secondary Karachi Board</p>
+                </div>
+              </div>
+
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>Intermediate</h4>
+                  <p>
+                    (Pre-Medical) From Board of Intermediate Education Karachi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="r-b-sec">
+            <div class="heading r-heading">
+              <h3><i class="fa-solid fa-laptop-code"></i>Projects</h3>
+            </div>
+            <div class="r-b-detail">
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>HTML and CSS</h4>
+                  <li>BanoQabil Website Clone</li>
+                  <li>Netflix Website Clone</li>
+                </div>
+              </div>
+
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>Javascript</h4>
+                  <li>Tic-Tac-Toe game</li>
+                  <li>3-D Portfolio</li>
+                </div>
+              </div>
+
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>Typescript</h4>
+                  <li>Command Line Projects</li>
+                </div>
+              </div>
+
+              <div class="school">
+                <div class="dot"></div>
+                <div class="school-detail">
+                  <h4>Next.JS and Tailwind</h4>
+                  <li>Portfolio</li>
+                  <li>Food Website</li>
+                  <li>E-Commerce Website</li>
+                  <li>Countdown Timer</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
