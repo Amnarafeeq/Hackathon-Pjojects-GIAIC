@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   margin: auto;
 }
+
 .main-fieldset {
   padding: 2rem 0rem;
   border: 15px double;
@@ -194,7 +195,7 @@ legend {
 :root {
   --main-color: #14bfcb;
 }
-#resume-generated{
+#resume-generated {
   display: none;
 }
 
@@ -371,8 +372,6 @@ legend {
   margin-right: 10px;
 }
 .r-b-detail {
-  /* width: 55vw; */
-
   min-height: 35vh;
   display: flex;
   justify-content: flex-start;
@@ -427,16 +426,16 @@ legend {
   border: none;
 }
 @media (max-width: 750px) {
-  .yellow-bar {
-    width: 5rem;
-    height: 13rem;
+  .blue-bar {
+    width: 5.5rem;
+    height: 14rem;
   }
   .user-circle {
     top: 3%;
     width: 10rem;
   }
   .user-name {
-    margin-left: 15%;
+    margin-left: 10%;
     margin-top: 4rem;
   }
   .user-name h1 {
@@ -446,13 +445,7 @@ legend {
   .user-name p {
     font-size: 27px;
   }
-  .icon-sec {
-    gap: 25px;
-    margin-top: 1rem;
-  }
-  .icon-sec a {
-    width: 22px;
-  }
+
   .bottom-sec {
     justify-content: flex-start;
     flex-direction: column;
@@ -500,14 +493,14 @@ legend {
   }
   .user-circle {
     top: 10%;
-    width: 9rem;
+    width: 8rem;
   }
   .top-sec {
     padding-left: 10%;
   }
-  .yellow-bar {
+  .blue-bar {
     width: 3.5rem;
-    height: 12rem;
+    height: 13rem;
   }
   .user-name {
     margin-left: 20%;
@@ -519,17 +512,7 @@ legend {
   }
   .user-name p {
     font-size: 20px;
-  }
-  .icon-sec {
-    gap: 15px;
-    margin-top: 0.8rem;
-    margin-left: 2rem;
-  }
-  .icon-sec a {
-    width: 18px;
-  }
-  .icon-sec a i {
-    font-size: 10px;
+    margin: 0px;
   }
   .b-l-detail {
     margin: 1rem 0 0 0;
