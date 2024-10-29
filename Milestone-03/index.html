@@ -1,63 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Dynamic Resume Builder</h1>
-    <div class="resume-form">
-        
-      <section id="personal-info-section">
-        <form>
-            
-              <h1>Personal Information</h1>
-              <label class="lbl" for="first-name">First Name:</label> <br> 
-              <input class="inp" type="text" id="first-name" name="name" placeholder="first-name"><br><br>
-          
-              <label class="lbl" for="first-name">Last Name:</label><br> 
-              <input class="inp" type="text" id="last-name" name="name" placeholder="last-name"><br><br>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="resume-input">
+      <form id="forms">
+        <fieldset class="main-fieldset">
+          <legend id="main-head">Dynamic Resume Builder</legend>
 
-              <label class="lbl" for="email">Email:</label><br> 
-              <input class="inp" type="email" id="email" name="email" placeholder="email"><br><br>
-          
-              <label class="lbl" for="number">Contact-No:</label><br> 
-              <input class="inp" type="text" id="phone" maxlength="11" placeholder="contact-no"> <br><br> 
-            </section> 
+          <div class="row">
+            <div class="col">
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Personal Information</legend>
 
-            <section id="education-section">
-                <h1>Education</h1>
-                <label class="lbl" for="education">Education :</label><br> 
-                <textarea class="inp" name="education" id="education"
-                rows="10" cols="50" required placeholder="write about your education here"></textarea> 
-                
-            </section>
+                <div class="info-detail">
+                  <label for="nameField">Name:</label>
+                  <input
+                    type="text"
+                    placeholder="Your full name.."
+                    class="form-control"
+                    id="nameField"
+                    required
+                  />
+                  <label for="contactField">Contact:</label>
+                  <input
+                    type="text"
+                    maxlength="11"
+                    placeholder="Your contact.."
+                    class="form-control"
+                    id="contactField"
+                    required
+                  />
+                </div>
 
-              <section id="skills-section">
-                <h1>Skills</h1>
-                <label class="lbl" for="skills">Skills :</label> <br> 
-                <textarea class="inp" name="skills" id="skills"
-                rows="10" cols="50" required placeholder="skills"></textarea> <br>
-            </section>
+                <div class="info-detail">
+                  <label for="addressfield">Address:</label>
+                  <input
+                    type="text"
+                    id="addressField"
+                    placeholder="Your address.."
+                    class="form-control"
+                    required
+                  />
+                  <label for="emailField">Email:</label>
+                  <input
+                    type="email"
+                    placeholder="Your email.."
+                    class="form-control"
+                    id="emailField"
+                    required
+                  />
+                </div>
 
-            <section id="work-exp-section">
-              <h1>Work-Experience</h1>
-                <label class="lbl" for="education">Work-Experience :</label><br> 
-                <textarea class="inp"  name="work-experience" id="work-experience"
-                rows="10" cols="50" required placeholder="enter your experience in work"></textarea> 
-            </section>
-            <button type="submit">Generate Resume</button>
-        </form>
+                <div class="info-detail">
+                  <label for="linkField">Linkedin:</label>
+                  <input
+                    type="text"
+                    placeholder="Your linkedin.."
+                    class="form-control"
+                    id="linkField"
+                    required
+                  />
+                  <label for="gitField">Github:</label>
+                  <input
+                    type="text"
+                    placeholder="Your github.."
+                    class="form-control"
+                    id="gitField"
+                    required
+                  />
+                </div>
+              </fieldset>
+              <!-- resume info -->
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Resume Information</legend>
+                <div class="resume-info">
+                  <label for="profilefield">Choose Profile Picture:</label>
+                  <input
+                    type="file"
+                    id="imgField"
+                    name="profile-image"
+                    class="form-control"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+                <div class="resume-info">
+                  <label for="profession">Profession:</label>
+                  <input
+                    type="text"
+                    id="professionField"
+                    placeholder="e.g., Software Developer"
+                    required
+                  />
+                </div>
+                <div class="resume-info profile-info">
+                  <label for="profield">Profile:</label>
+                  <textarea
+                    id="proField"
+                    rows="4"
+                    cols="30"
+                    class="form-control"
+                    placeholder="Write about yourself and profession"
+                    required
+                  ></textarea>
+                </div>
+              </fieldset>
+
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Education</legend>
+                <div class="resume-info edu-info" id="ed">
+                  <label for="edAdd">Education:</label>
+                  <textarea
+                    rows="3"
+                    cols="40"
+                    class="form-control edField"
+                    placeholder="e.g., School Name, Degree"
+                    required
+                  ></textarea>
+                </div>
+                <div class="btn-container">
+                  <button
+                    onclick="addNewEdField()"
+                    id="edAddButton"
+                    class="btn"
+                  >
+                    Add
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col2">
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Technical Courses</legend>
+                <div class="edu-info" id="course">
+                  <label for="courseAdd">Add Courses:</label>
+                  <textarea
+                    rows="3"
+                    cols="40"
+                    class="form-control courseField"
+                    placeholder="e.g., Web Development Bootcamp, Codecademy"
+                    required
+                  ></textarea>
+                </div>
+                <div class="btn-container">
+                  <button
+                    onclick="addNewCourseField()"
+                    id="courseAddButton"
+                    class="btn"
+                  >
+                    Add
+                  </button>
+                </div>
+              </fieldset>
+
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Skills</legend>
+                <div class="edu-info" id="skill">
+                  <label for="skillAdd">Add Skills:</label>
+                  <textarea
+                    rows="2"
+                    cols="40"
+                    class="form-control skillField"
+                    placeholder="e.g., JavaScript, React, Python, Project Management"
+                    required
+                  ></textarea>
+                </div>
+                <div class="btn-container">
+                  <button
+                    onclick="addNewSkillField()"
+                    id="skillAddButton"
+                    class="btn"
+                  >
+                    Add
+                  </button>
+                </div>
+              </fieldset>
+
+              <fieldset class="sub-fieldset">
+                <legend class="sub-head">Work Experience</legend>
+                <div class="edu-info" id="exp">
+                  <label for="expAdd">Add Experience:</label>
+                  <textarea
+                    rows="3"
+                    cols="40"
+                    class="form-control expField"
+                    placeholder="Describe your role and achievements"
+                    required
+                  ></textarea>
+                </div>
+                <div class="btn-container">
+                  <button
+                    onclick="addNewExpField()"
+                    id="expAddButton"
+                    class="btn"
+                  >
+                    Add
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="resume-btn">
+            <button type="submit" onclick="genResume()">Generate Resume</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
-    
-    
-    <div  id="resume-display">
+
+       <!-- generated resume -->
+
+    <div id="resume-generated">
+      <div class="main-container">
+        <div class="top-sec">
+          <div class="user-sec">
+            <div class="blue-bar">
+              <div class="user-circle">
+                <div class="under-blue">
+                  <img src="" alt="" id="user-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="user-name">
+            <h1 id="userName"></h1>
+            <p id="user-profession"></p>
+          </div>
+        </div>
+
+        <div class="bottom-sec">
+          <div class="bottom-left">
+            <div class="b-l-sec">
+              <!-- contact -->
+              <div class="b-l-card">
+                <div class="heading">
+                  <h3>Contact</h3>
+                </div>
+                <div class="b-l-detail">
+                  <a href="#" class="detail" id="user-address"> </a>
+                  <a href="#" class="detail" id="user-phone"> </a>
+                  <a href="#" class="detail" id="user-email"> </a>
+                  <a href="#" class="detail" id="user-linkedin"> </a>
+                  <a href="#" class="detail" id="user-github"> </a>
+                </div>
+              </div>
+              <!-- technical courses -->
+              <div class="b-l-card">
+                <div class="heading">
+                  <h3>Technical Courses</h3>
+                </div>
+                <div class="b-l-detail">
+                  <div class="course">
+                    <div class="course-detail">
+                      <ul id="user-courses"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- skills -->
+              <div class="b-l-card">
+                <div class="heading">
+                  <h3>Skills</h3>
+                </div>
+
+                <div class="b-l-detail">
+                  <ul id="user-skill"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-right">
+            <div class="r-b-sec">
+              <!-- profile -->
+              <div class="heading r-heading">
+                <h3><i class="fa-solid fa-user"></i>Profile</h3>
+              </div>
+              <div class="r-b-detail">
+                <p id="user-profile"></p>
+              </div>
+            </div>
+
+            <div class="r-b-sec">
+              <!-- education -->
+              <div class="heading r-heading">
+                <h3><i class="fa-solid fa-certificate"></i>Education</h3>
+              </div>
+              <div class="r-b-detail">
+                <div class="education">
+                  <div class="education-detail" id="user-edu"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="r-b-sec">
+              <!-- work experience -->
+              <div class="heading r-heading">
+                <h3><i class="fa-solid fa-laptop-code"></i>Work Experience</h3>
+              </div>
+              <div class="r-b-detail">
+                <ul id="user-exp"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script src="script.js" defer></script>
-
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
-
