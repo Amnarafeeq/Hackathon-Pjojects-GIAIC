@@ -199,7 +199,7 @@ legend {
 }
 
 .main-container {
-  max-width: 850px;
+  max-width: 800px;
   width: 100%;
   height: fit-content;
   box-shadow: 0px 0px 30px #00000026;
@@ -240,6 +240,7 @@ legend {
 }
 .under-blue {
   width: 80%;
+
   height: 80%;
   background: var(--main-color);
   border-radius: 50%;
@@ -272,18 +273,15 @@ legend {
 
 .bottom-sec {
   width: 100%;
-  min-height: 55rem;
   background: white;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-start;
 }
 .bottom-left {
   width: 37%;
-  min-width: 23vw;
-  padding-top: 4rem;
+  padding-top: 5rem;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -305,11 +303,10 @@ legend {
 }
 .b-l-detail {
   width: 100%;
-  min-height: 30vh;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin: 1.5rem 0 4rem 0;
+  margin: 1.5rem 0 2rem 0;
 }
 .b-l-detail ul li {
   width: 100%;
@@ -328,9 +325,6 @@ legend {
   gap: 10px;
 }
 
-.course {
-  min-height: 25vh;
-}
 .course-detail li {
   color: #696969;
   margin-top: 5px;
@@ -352,13 +346,14 @@ legend {
 }
 .bottom-right {
   width: 65%;
-  min-height: 105%;
-  max-height: 105%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: #424341;
   position: relative;
-  margin-top: -5.3%;
   border-radius: 100px 0 0 0;
-  padding: 4rem 5% 0rem 5%;
+  padding: 4rem 5% 0 5%;
 }
 .r-heading {
   background: var(--main-color);
@@ -370,12 +365,11 @@ legend {
   margin-right: 10px;
 }
 .r-b-detail {
-  min-height: 35vh;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   gap: 25px;
-  margin: 1.8rem 0 4rem 0;
+  margin: 1.8rem 0 2rem 0;
 }
 .r-b-detail,
 .r-b-detail ul li {
@@ -401,13 +395,12 @@ legend {
   margin-top: 4px;
 }
 .education-detail {
-  width: 90%;
+  width: 100%;
 }
 
 .education-detail li {
   color: #e5e5e5;
   margin: 5px 0;
-  width: 70%;
 }
 .education-detail li::marker {
   font-size: 1.2rem;
@@ -487,9 +480,7 @@ legend {
     padding: 0 4%;
     flex-wrap: wrap;
   }
-  .course {
-    padding-left: 1.5rem;
-  }
+
   .b-l-card {
     width: 300px;
   }
@@ -539,3 +530,55 @@ legend {
     margin: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
