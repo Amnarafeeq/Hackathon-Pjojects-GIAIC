@@ -80,7 +80,7 @@ function genResume(event:Event){
     `<i class="fa-brands fa-linkedin"></i> ${(document.getElementById("linkField") as HTMLInputElement).value}`;
     (document.getElementById("user-github") as HTMLElement).innerHTML = 
     `<i class="fa-brands fa-github"></i> ${(document.getElementById("gitField") as HTMLInputElement).value}`;
-  
+
     (document.getElementById("user-profession") as HTMLElement).innerHTML = 
     (document.getElementById("professionField") as HTMLInputElement).value;
     (document.getElementById("user-profile") as HTMLElement).innerHTML = 
